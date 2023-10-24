@@ -82,7 +82,10 @@ button{
     list-style-type: none;
     color: #000000;
 }
-#listaProdutos li span {
+#listaProdutos2{
+    list-style-type: none;
+}
+#listaProdutos2 li span {
     font-weight: bold;
     font-size: 25px;
     border-radius: 30px ;
@@ -93,5 +96,4 @@ button{
     margin-left: 80px; 
     margin-right: 90px; 
     color: #ffffff;
-    
 }

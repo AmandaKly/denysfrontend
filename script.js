@@ -1,8 +1,11 @@
-require('dotenv').config();
-const meudado = process.env.APIURL;
+const hostUrl = window.location.href
+const host = hostUrl.split("//")[1]
+const ip = host.split(":")[0]
+const urlApi = `http://` + ip + ":3000/api/dados"
 
 function cadastrarProduto(event) {
-    event.preventDefault(); // Impede o comportamento padrão do formulário (recarregar a página)
+    obterProdutos()
+    event.preventDefault(); 
 
     var nome = document.getElementById("nomeProduto").value;
     var quantidade = document.getElementById("quantidade").value;
@@ -12,7 +15,7 @@ function cadastrarProduto(event) {
         quantidade: quantidade
     };
 
-    fetch(`${meudado}/dados`, {
+    fetch(urlApi, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -30,7 +33,35 @@ function cadastrarProduto(event) {
     .catch((error) => {
         console.error('Erro ao cadastrar o produto:', error);
     });
+    obterProdutos()
     }
 
+    function obterProdutos() {
+        fetch(urlApi, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+    .then(response => response.json())
+        
+       
+    .then(data => {
+            console.log('Produtos obtidos com sucesso:', data);
+            listaProdutos2.innerHTML = ''
+            data.forEach(itens => {
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    <span>${itens.nome}</span>
+                    <span>${itens.quantidade}</span>
+                `;
+                listaProdutos2.appendChild(li);
+                
+            });
+        })
+    .catch((error) => {
+            console.error('Erro ao obter os produtos:', error);
+        });
 
-    
+    }
+obterProdutos()
