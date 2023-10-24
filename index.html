@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Cadastrar</title>
+</head>
+<body>
+    <main>
+
+        <div>
+            <img src="./imagem.png" alt="">
+            <h1>Vamos cadastrar produtos!</h1>
+        </div>
+        <form  action=""  onsubmit="cadastrarProduto(event)">
+            <div class="produtos">
+                <div>
+                    <label for="nomeProduto">Nome do produto</label>
+                    <input type="text" name="nomeProduto" id="nomeProduto" >
+                </div>
+                <div>
+                    <label for="quantidade">Quantidade</label>
+                    <input type="number" name="quantidade" id="quantidade">
+                </div>
+            </div>
+            <div>
+                <button type="submit">Cadastrar</button>
+            </div>
+            <div class="linha"></div>
+        </form>
+        <div class="lista">
+            <ul id="listaProdutos">
+                <li>
+                    <span>Nome do Produto</span>
+                    <span>Quantidade</span>
+                    <span>Preço do Produto</span>
+                </li>
+            </ul>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
