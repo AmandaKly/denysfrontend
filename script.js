@@ -1,18 +1,36 @@
+require('dotenv').config();
+const meudado = process.env.APIURL;
+
 function cadastrarProduto(event) {
-    event.preventDefault();
-  
-    var nomeProduto = document.querySelector('input[name="nomeProduto"]').value;
-    var quantidade = document.querySelector('input[name="quantidade"]').value;
-    var preco = document.querySelector('input[name="precoProduto"]').value;
-  
-    var novaLinha = document.createElement('li');
-    novaLinha.innerHTML = `
-        <span>${nomeProduto}</span>
-        <span>${quantidade}</span>
-        <span>${preco}</span>
-    `;
-  
-    document.getElementById('listaProdutos').appendChild(novaLinha);
-  
-    document.querySelector('form').reset();
-  }
+    event.preventDefault(); // Impede o comportamento padrão do formulário (recarregar a página)
+
+    var nome = document.getElementById("nomeProduto").value;
+    var quantidade = document.getElementById("quantidade").value;
+
+    var data = {
+        nome: nome,
+        quantidade: quantidade
+    };
+
+    fetch(`${meudado}/dados`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(data => {
+        
+       
+        console.log('Produto cadastrado com sucesso:', data);
+        
+            })
+
+    .catch((error) => {
+        console.error('Erro ao cadastrar o produto:', error);
+    });
+    }
+
+
+    
