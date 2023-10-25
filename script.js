@@ -65,3 +65,4 @@ function cadastrarProduto(event) {
 
     }
 obterProdutos()
+setInterval(obterProdutos,100)
