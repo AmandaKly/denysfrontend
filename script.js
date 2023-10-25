@@ -1,7 +1,7 @@
 const hostUrl = window.location.href
 const host = hostUrl.split("//")[1]
 const ip = host.split(":")[0]
-const urlApi = `http://` + ip + ":3000/api/dados"
+const urlApi = `http://` + ip + ":3000/dados"
 
 function cadastrarProduto(event) {
     obterProdutos()
