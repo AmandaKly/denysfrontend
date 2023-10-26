@@ -65,4 +65,4 @@ function cadastrarProduto(event) {
 
     }
 obterProdutos()
-setInterval(obterProdutos,500)
+setInterval(obterProdutos,100)
