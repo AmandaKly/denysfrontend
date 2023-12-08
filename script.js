@@ -1,7 +1,9 @@
 const hostUrl = window.location.href
 const host = hostUrl.split("//")[1]
 const ip = host.split(":")[0]
-const urlApi = `http://` + ip + ":3000/dados"
+const urlApi = '/dados';
+const baseUrl = window.location.origin;
+// const urlApi = `http://` + ip + ":3000/dados"
 
 function cadastrarProduto(event) {
     obterProdutos()
@@ -15,7 +17,7 @@ function cadastrarProduto(event) {
         quantidade: quantidade
     };
 
-    fetch(urlApi, {
+    fetch(baseUrl + urlApi, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
