@@ -1,13 +1,13 @@
 const hostUrl = window.location.href
 const host = hostUrl.split("//")[1]
 const ip = host.split(":")[0]
-const urlApi = 'http://10.99.233.234:3000/dados';
+const urlApi = 'http://apiclusteriphomolog:3000/dados';
 // const baseUrl = window.location.origin;
 // const urlApi = `http://` + ip + ":3000/dados"
 
 function cadastrarProduto(event) {
     obterProdutos()
-    event.preventDefault(); 
+    event.preventDefault();
 
     var nome = document.getElementById("nomeProduto").value;
     var quantidade = document.getElementById("quantidade").value;
