@@ -1,4 +1,4 @@
-const urlApi = "http://homolog.10.48.10.146.nip.io/dados";
+const urlApi = "http://develop.10.48.10.146.nip.io/dados";
 // const hostUrl = window.location.href
 // const host = hostUrl.split("//")[1]
 // const ip = host.split(":")[0]
