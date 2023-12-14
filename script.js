@@ -1,4 +1,4 @@
-const urlApi = "http://backend-service:3000/dados";
+const urlApi = "http://homolog.10.48.10.146.nip.io/backend";
 // const hostUrl = window.location.href
 // const host = hostUrl.split("//")[1]
 // const ip = host.split(":")[0]
