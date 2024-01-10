@@ -1,4 +1,4 @@
-const urlApi = "http://production.10.48.10.146.nip.io/dados";
+const urlApi = "http://production.yourIP.nip.io/dados";
 
 function cadastrarProduto(event) {
     obterProdutos()
