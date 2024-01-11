@@ -3,3 +3,21 @@
 Disciplina ministrada pelo professor da área de Redes Denys Silva - IFRN (Campus Currais Novos).
 
 <a href="https://github.com/AmandaKly/denysapi">Clique aqui para ver a parte do back-end!</a>
+
+### Para executar o programa:
+1. Entre na Pasta yaml que se encontra na branch main;
+2. Escolha um dos arquivos na pasta yaml;
+3. Crie um arquivo em seu vscode com a extensão .yaml (nomeArquivo.yaml) e cole o conteúdo nela do yaml que você preferiu;
+4. No Ingress, substituia "yourIP" pelo IP da sua máquina;
+5. Após isso, execute o comando kubectl apply -f '*.yaml' no terminal,
+Exemplo:
+```console
+foo@bar:~$ kubectl apply -f atvkubedevelop.yaml
+namespace/develop created
+deployment.apps/nginx-deployment-develop created
+deployment.apps/node-deployment-develop created
+service/backend-service created
+service/frontend-service created
+ingress.networking.k8s.io/ingress-primario-develop created
+foo@bar:~$
+ ```
