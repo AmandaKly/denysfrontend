@@ -12,12 +12,12 @@ Disciplina ministrada pelo professor da área de Redes Denys Silva - IFRN (Campu
 5. Após isso, execute o comando kubectl apply -f '*.yaml' no terminal,
 Exemplo:
 ```console
-foo@bar:~$ kubectl apply -f atvkubedevelop.yaml
+user@bar:~$ kubectl apply -f atvkubedevelop.yaml
 namespace/develop created
 deployment.apps/nginx-deployment-develop created
 deployment.apps/node-deployment-develop created
 service/backend-service created
 service/frontend-service created
 ingress.networking.k8s.io/ingress-primario-develop created
-foo@bar:~$
+user@bar:~$
  ```
