@@ -9,7 +9,7 @@ Disciplina ministrada pelo professor da área de Redes Denys Silva - IFRN (Campu
 2. Escolha um dos arquivos na pasta yaml;
 3. Crie um arquivo em seu vscode com a extensão .yaml (nomeArquivo.yaml) e cole o conteúdo nela do yaml que você preferiu;
 4. No Ingress, substituia "yourIP" pelo IP da sua máquina;
-5. Após isso, execute o comando kubectl apply -f '*.yaml' no terminal,
+5. Após isso, execute o comando kubectl apply -f '*.yaml' no terminal( O terminal precisa está no caminho da pasta onde se encontra o seu arquivo yaml),
 Exemplo:
 ```console
 user@bar:~$ kubectl apply -f atvkubedevelop.yaml
