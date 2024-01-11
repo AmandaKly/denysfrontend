@@ -13,6 +13,10 @@ Disciplina ministrada pelo professor da área de Redes Denys Silva - IFRN (Campu
 Exemplo:
 ```console
 user@bar:~$ kubectl apply -f atvkubedevelop.yaml
+ ```
+Se tudo ocorrer bem, deverá aparecer o seguinte:
+```console
+user@bar:~$ kubectl apply -f atvkubedevelop.yaml
 namespace/develop created
 deployment.apps/nginx-deployment-develop created
 deployment.apps/node-deployment-develop created
