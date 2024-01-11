@@ -1,7 +1,7 @@
 // const urlApi = "http://develop.yourIP.nip.io/dados";
 const hostUrl = window.location.href
 const host = hostUrl.split("//")[1]
-const ip = host.split(":")[0]
+const ip = host.split("/app")[0]
 
 const baseUrl = window.location.origin;
 const urlApi = `http://` + ip + "/dados"
