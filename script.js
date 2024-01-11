@@ -4,7 +4,7 @@ const host = hostUrl.split("//")[1]
 const ip = host.split(":")[0]
 
 const baseUrl = window.location.origin;
-const urlApi = `http://` + ip
+const urlApi = `http://` + ip + "/dados"
 
 function cadastrarProduto(event) {
     obterProdutos()
