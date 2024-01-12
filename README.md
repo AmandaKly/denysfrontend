@@ -5,6 +5,7 @@ Disciplina ministrada pelo professor da área de Redes Denys Silva - IFRN (Campu
 <a href="https://github.com/AmandaKly/denysapi">Clique aqui para ver a parte do back-end!</a>
 
 ### Para executar o programa:
+(Antes de tudo, certifique-se de ter instalado o kubernetes, o Helm e o Ingress em sua máquina!)
 1. Entre na Pasta yaml que se encontra na branch main;
 2. Escolha um dos arquivos na pasta yaml;
 3. Crie um arquivo em seu vscode com a extensão .yaml (nomeArquivo.yaml) e cole o conteúdo nela do yaml que você preferiu;
