@@ -25,7 +25,8 @@ service/frontend-service created
 ingress.networking.k8s.io/ingress-primario-develop created
 user@bar:~$
  ```
-6. Para parar de rodá-lo execute o comando kubectl delete ns nomeDoNamespace,
+6. Para vê-lo rodando no browser, coloque o endereço do ingress, exemplo: develop.yourIP.nip.io/app
+7. Para parar de rodá-lo execute o comando kubectl delete ns nomeDoNamespace,
 Exemplo:
 ```console
 user@bar:~$ kubectl delete ns develop
